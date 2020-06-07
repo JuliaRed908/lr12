@@ -1,0 +1,48 @@
+<app-add-form (updateWorker)="getData()"></app-add-form>
+
+
+<div class="row mt-2 mb-3">
+    <h5 class="col-2">Поиск</h5>
+    <div class="col-4">
+        
+       
+    </div>
+</div>
+
+    <div class="row mb-3 " [formGroup]="search" >
+        <div class="row mt-1">
+          
+         <div class=" col-12 ml-3">
+            <input type="text" class="form-control" placeholder="Имя и Фамилия" formControlName="name"/>
+         </div>
+         
+        
+         
+        </div>
+  
+    </div>
+
+    <div class="row mt-2 mb-3">
+      <h5 class="ml-3"><a>Фильтры:</a></h5>
+      <div class="row col-12 ml-1">
+      
+      <div class=" ">
+        <button width="300px" class="btn  btn-sm" style="width: 150px;" (click)="onButton(0)" *ngIf="ButtonController(0) == 0" >id по возрастанию</button>
+        <button width="300px" class="btn   btn-sm" style="width: 150px;" (click)="onButton(0)" *ngIf="ButtonController(0) == 1">id по убыванию</button>
+        <button width="300px" class="btn  btn-sm" style="width: 150px;" (click)="onButton(0)" *ngIf="ButtonController(0) == 2">id по возрастанию</button>
+        </div>
+      <div class=" ml-1">
+        <button width="300px" class="btn  btn-sm" style="width: 200px;" (click)="onButton(1)" *ngIf="ButtonController(1) == 0" >Возраст по возрастанию</button>
+        <button width="300px" class="btn  btn-sm" style="width: 200px;" (click)="onButton(1)" *ngIf="ButtonController(1) == 1">Возраст по убыванию</button>
+        <button width="300px" class="btn  btn-sm"  style="width: 200px;" (click)="onButton(1)" *ngIf="ButtonController(1) == 2">Возраст по возрастанию</button>
+       </div>
+  </div>
+
+  <app-table-workers class="ml-3 col-12"
+    [title]="'Все сотрудники'"
+    [workers]="getList()|sort:search.value:ButtonController(0):ButtonController(1)"
+    (deleteWorker)="onDeleteById($event)"
+    (changeWorker)="onChangeById($event)"
+  ></app-table-workers>
+
+

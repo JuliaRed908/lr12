@@ -1,0 +1,86 @@
+<div class="row col-12 mt-4">
+
+  <div class="row ml-1" *ngIf="onChange==false">
+    <!--<th class="border border-primary rounded">-->
+    <div class="col-12 row mt-2">
+        <div class="col-3 ">Имя: <br> {{ OpenWorker.name }}</div>
+        <div class="col-3 ">Фамилия: <br>{{ OpenWorker.surname }}</div>
+        <div class="col-3">Отчество: <br>{{ OpenWorker.patronimic }}</div>
+        
+    </div>
+    <div class="col-12 row mt-3 ml-1">
+        
+        <div class=" ">Дата рождения: {{ OpenWorker.date }}</div>
+        <div class="ml-3 ">Возраст: {{ getAge(OpenWorker.date) }}</div>
+        
+    </div>
+    <div class="col-12 row mt-3 ml-1">
+        <div class=" ">Email:<br> {{ OpenWorker.email }}</div>
+        
+    </div>
+    <div class="col-12 row mt-3 ml-1">
+        <div class=" ">Телефон:<br> {{ OpenWorker.telephone }}</div>
+        
+        
+    </div>
+    <div class="col-12 row mt-3 ml-1">
+        
+        <div class=" ">Отдел:<br> {{Type(OpenWorker.type)}}</div>
+    </div>
+    
+    <div class="col-4 mt-3"></div>
+    <div class="mr-1 ">
+      <button class="btn btn-outline-success btn-sm " (click)="onChangeWorker()">Изменить</button>
+    </div>
+    <div class=" mr-1">
+        <button class="btn btn-outline-success btn-sm" routerLink="/WorkerBD">Назад</button>
+    </div>
+    <div class=" mr-1">
+        <button class="btn btn-outline-danger btn-sm" (click)="onDeleteById(OpenWorker.id)">Удалить</button>
+    </div>
+  </div>
+
+<div class="col-12 row" *ngIf="onChange==true">
+    <div [formGroup]="ChangeForm" class="col-12 row">
+    <div class="col-12 row mt-2">
+        <div class=" col-3 ">Имя: <input  [(ngModel)]="ChangeName" type="text" formControlName="name"/></div>
+        <div class=" col-3 "><a>Фамилия:</a> <input  [(ngModel)]="ChangeSurname" type="text" formControlName="surname"/></div>
+        <div class="  col-3">Отчество: <input  [formGroup]="ChangeForm" [(ngModel)]="ChangePatronimic" type="text" formControlName="patronimic" /></div>
+        
+    </div>
+    <div class="col-12 row mt-2">
+        
+        <div class="ml-3">Дата рождения: <input [(ngModel)]="CangeDate" type="date" formControlName="date" /></div>
+        
+        <div class=" mt-1">Возраст: {{CangeAge}}</div>
+    </div>
+    <div class="col-12 row mt-2">
+        
+        <div class="col-3 mt-1">Email: <input [(ngModel)]="CangeEmail" type="text" formControlName="email" mask="A*@A*.SSS" [dropSpecialCharacters]="false"/></div>
+    </div>
+    </div>
+    <div class="col-3 mt-2">Телефон: <input [(ngModel)]="CangeTelephone" type="text" mask="+0(000) 000-0000" [dropSpecialCharacters]="false"/></div>
+    <div class="col-12 row mt-2">
+        <div class="col-6 mt-2">
+        <div class="">Отдел:</div> 
+            <select class="col-8 custom-select" [(ngModel)]="type">
+            <option [ngValue]="myWorkerType.ItDepartment">IT отдел</option>
+            <option [ngValue]="myWorkerType.Selldepartment">Отдел продаж</option>
+            <option [ngValue]="myWorkerType.DeliveryDepartment">Отдел доставки</option>
+            <option [ngValue]="myWorkerType.LegalDepartment">Юридический отдел</option>
+          </select>
+        </div>
+        
+    </div>
+    <div class="col-4 mt-3"></div>
+    <div class="mr-1">
+        <button class="btn btn-outline-success btn-sm" (click)="onSubmitChanges()" [disabled]="ChangeForm.invalid">Принять</button>
+    </div>
+    <div class="mr-1">
+        <button class="btn btn-outline-success btn-sm" (click)="back()">Назад</button>
+    </div>
+    <div class="mr-1">
+        <button class="btn btn-outline-danger btn-sm" (click)="onDeleteById(OpenWorker.id)">Удалить</button>
+    </div>
+  </div>
+</div>

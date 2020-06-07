@@ -1,0 +1,124 @@
+{
+  "workers": [
+    {
+      "name": "роопар",
+      "surname": "апрапр",
+      "date": "1986-06-12",
+      "patronimic": "парпара",
+      "email": "fgyhf@FDG.DSF",
+      "telephone": "+5(675) 675-6756",
+      "type": 2,
+      "id": 14
+    },
+    {
+      "name": "ghjgh",
+      "surname": "ghjghj",
+      "patronimic": "ghjghj",
+      "date": "2000-06-12",
+      "email": "dfgdf@FD.FG",
+      "id": 16,
+      "type": 0,
+      "telephone": "+6(756) 756-7567"
+    },
+    {
+      "name": "ВАПАП",
+      "surname": "АВПВАП",
+      "date": "1989-07-12",
+      "patronimic": "ВАПВАПВ",
+      "email": "VGF@GFG.DF",
+      "telephone": "+4(534) 534-5345",
+      "type": 1,
+      "id": 17
+    },
+    {
+      "name": "RTERT",
+      "surname": "RTERT",
+      "date": "1994-07-14",
+      "patronimic": "ERT",
+      "email": "TRET@GFG.COM",
+      "telephone": "+4(353) 453-4534",
+      "type": 1,
+      "id": 18
+    },
+    {
+      "name": "tretre",
+      "surname": "retretre",
+      "patronimic": "retret",
+      "date": "2016-02-18",
+      "email": "sdfdsf@gmdf.rt",
+      "id": 19,
+      "type": 0,
+      "telephone": "+4(534) 534-5345"
+    },
+    {
+      "name": "sdfds",
+      "surname": "sdfdsf",
+      "date": "2014-02-12",
+      "patronimic": "sdfdsf",
+      "email": "dsfsdf@fdf.rer",
+      "telephone": "+3(424) 234-2342",
+      "type": 1,
+      "id": 20
+    },
+    {
+      "name": "123456",
+      "surname": "123",
+      "patronimic": "123",
+      "date": "1999-12-12",
+      "email": "fgdf@fsd.def",
+      "id": 21,
+      "type": 2,
+      "telephone": "+3(453) 453-4534"
+    },
+    {
+      "name": "RTERT",
+      "surname": "ERTERT",
+      "date": "2000-12-12",
+      "patronimic": "ERTER",
+      "email": "DFTGER@DFSG.DSF",
+      "telephone": "+4(534) 534-5345",
+      "type": 1,
+      "id": 22
+    },
+    {
+      "name": "123456",
+      "surname": "123",
+      "date": "1999-12-12",
+      "patronimic": "213",
+      "email": "fgrt@fgdg.dfg",
+      "telephone": "+2(342) 424-2342",
+      "type": 1,
+      "id": 23
+    },
+    {
+      "name": "34534",
+      "surname": "345345",
+      "date": "2000-12-12",
+      "patronimic": "345345",
+      "email": "df@dfgrtgrtgdfgdfgdfgd.EFD",
+      "telephone": "+3(453) 453-4534",
+      "type": 0,
+      "id": 24
+    },
+    {
+      "name": "DFGDFG",
+      "surname": "GFDFG",
+      "date": "2000-12-12",
+      "patronimic": "FGDFG",
+      "email": "DSFSD@dg.dg",
+      "telephone": "+4(534) 534-5345",
+      "type": 1,
+      "id": 25
+    },
+    {
+      "name": "1",
+      "surname": "1",
+      "date": "2009-07-17",
+      "patronimic": "1",
+      "email": "ddf@fd.ffw",
+      "telephone": "+1(111) 111-1111",
+      "type": 2,
+      "id": 26
+    }
+  ]
+}

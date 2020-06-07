@@ -1,0 +1,49 @@
+<div class="row mt-2 mb-3">
+  <h5 class="col-6 mt-4">Добавление рабочего: </h5>
+  <div class="col-12" [formGroup]="ChangeForm">
+    <div class="row mt-4 ">
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Имя" formControlName="name"/>
+     </div>
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname"/>
+      </div>
+     <div class="col-4">
+        <input type="text" class="form-control" placeholder="Отчество" formControlName="patronimic" />
+      </div>
+    </div>
+
+    <div class="row mt-1 " >
+      <div class="col-4">
+         <input type="date" class="form-control" placeholder="Дата рождения" formControlName="date"  />
+      </div>
+      <div class="col-4">
+         <input type="text" class="form-control" placeholder="Email" formControlName="email" mask="A*@A*.SSS" [dropSpecialCharacters]="false"/>
+       </div>
+      <div class="col-4">
+         <input type="text" class="form-control" placeholder="Телефон" formControlName="telephone" mask="+0(000) 000-0000" [dropSpecialCharacters]="false" />
+       </div>
+       
+     </div>
+  </div>
+
+    <div class="col-12 row mt-2  ">
+      <select class="col-3 custom-select ml-3" [(ngModel)]="type">
+        <option [ngValue]="myWorkerType.ItDepartment">IT отдел</option>
+        <option [ngValue]="myWorkerType.Selldepartment">Отдел продаж</option>
+        <option [ngValue]="myWorkerType.DeliveryDepartment">Отдел доставки</option>
+        <option [ngValue]="myWorkerType.LegalDepartment">Юридический отдел</option>
+      </select>
+      <div class="col-4 mt-1">
+        <button class="btn  btn-sm" (click)="onAddWorker()" [disabled]="ChangeForm.invalid">Добавить</button>
+      </div></div>
+  
+  
+</div>
+  <router-outlet></router-outlet>
+
+
+
+ 
+
+
